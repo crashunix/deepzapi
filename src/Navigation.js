@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
 
 import HomeScreen from './screens/Home';
-import SearchScreen from './screens/Messages';
+import MessagesScreen from './screens/Messages';
 import ComingScreen from './screens/Coming';
 
 const Tab = createBottomTabNavigator();
@@ -52,7 +52,7 @@ export default function Navigation() {
             }} component={HomeScreen}/>
             <Tab.Screen name="Messages" options={{
                 title: ''
-            }} component={SearchScreen}/>
+            }} component={MessagesScreen}/>
             <Tab.Screen name="Friends" options={{
                 title: ''
             }} component={ComingScreen}/>

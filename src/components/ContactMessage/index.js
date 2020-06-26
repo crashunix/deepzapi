@@ -5,8 +5,8 @@ import { Message, Info, Up, Name, Date, Body, Container } from './styles';
 
 export default function ContactMessage(props) {
     return (
-        <Container>
-            <Message>
+        <Container novo={props.msg.novo}>
+            <Message href="/message">
                 <CircleUser imageStyle={{
                     borderRadius: 30
                 }} source={{uri: props.msg.foto}}>{props.msg.online ? <Online /> : <></>}</CircleUser>
@@ -15,7 +15,7 @@ export default function ContactMessage(props) {
                         <Name>{props.msg.nome}</Name>
                         <Date>{props.msg.data}</Date>
                     </Up>
-                    <Body>{props.msg.texto}</Body>
+                    <Body novo={props.msg.novo}>{props.msg.texto}</Body>
                 </Info>
             </Message>
         </Container>

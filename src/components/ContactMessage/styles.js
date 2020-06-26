@@ -2,6 +2,16 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     padding: 10px 20px 10px 15px;
+    ${props => props.novo ? 'background: #333740' : ''};
+    &::before {
+        content: 'a';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        background: #04b5ff;
+    }
 `;
 
 export const Message = styled.TouchableOpacity`
@@ -24,12 +34,12 @@ export const Up = styled.View`
 `;
 
 export const Name = styled.Text`
-    font-weight: bold;
     color: #fff;
+    font-weight: bold;
 `;
 export const Date = styled.Text`
     color: #777;
 `;
 export const Body = styled.Text`
-    color: #aaa;
+    ${props => props.novo ? 'color: #04b5ff' : 'color: #fff'};
 `;

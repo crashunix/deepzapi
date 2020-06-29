@@ -5,17 +5,17 @@ import { Message, Info, Up, Name, Date, Body, Container } from './styles';
 
 export default function ContactMessage(props) {
     return (
-        <Container novo={props.msg.novo}>
+        <Container onPress={() => props.navigation.navigate("Message", {contact: props.contact, navigation: props.navigation})} novo={props.contact.novo}>
             <Message href="/message">
                 <CircleUser imageStyle={{
                     borderRadius: 30
-                }} source={{uri: props.msg.foto}}>{props.msg.online ? <Online /> : <></>}</CircleUser>
+                }} source={{uri: props.contact.foto}}>{props.contact.online ? <Online /> : <></>}</CircleUser>
                 <Info>
                     <Up>
-                        <Name>{props.msg.nome}</Name>
-                        <Date>{props.msg.data}</Date>
+                        <Name>{props.contact.nome}</Name>
+                        <Date>{props.contact.data}</Date>
                     </Up>
-                    <Body novo={props.msg.novo}>{props.msg.texto}</Body>
+                    <Body novo={props.contact.novo}>{props.contact.texto}</Body>
                 </Info>
             </Message>
         </Container>

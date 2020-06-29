@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text } from 'react-native';
+import { Text, Button, TouchableOpacity } from 'react-native';
 
 import { Title, Label, CircleUser, Online, Divider } from '../../components/UI';
 import ContactMessage from '../../components/ContactMessage';
@@ -8,7 +8,7 @@ import { Container, Header, Content, Favourites, FavouritesScroll, Top, List, Me
 
 import { Feather } from '@expo/vector-icons';
 
-export default function Messages() {
+export default function Messages({ navigation }) {
 
     const [favoriteUsers, setFavoriteUsers] = useState([
         {
@@ -23,7 +23,7 @@ export default function Messages() {
         },
     ]);
 
-    const [messages, setMessages] = useState([
+    const [contacts, setContacts] = useState([
         {
             id: 123123,
             nome: 'Sakura Haruno',
@@ -113,7 +113,7 @@ export default function Messages() {
             <Divider ></Divider>
             <MessagesScroll vertical>
                 <MessagesList>
-                    {messages.map(msg => (<ContactMessage key={msg.id} msg={msg} />))}
+                    {contacts.map(contact => (<ContactMessage navigation={navigation} key={contact.id} contact={contact} />))}
                 </MessagesList>
             </MessagesScroll>
         </Container>

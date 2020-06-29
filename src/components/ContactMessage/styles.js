@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
     padding: 10px 20px 10px 15px;
     ${props => props.novo ? 'background: #333740' : ''};
     &::before {
@@ -14,7 +14,7 @@ export const Container = styled.View`
     }
 `;
 
-export const Message = styled.TouchableOpacity`
+export const Message = styled.View`
     flex-direction: row;
 `;
 

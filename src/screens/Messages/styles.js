@@ -39,7 +39,7 @@ export const List = styled.View`
     flex-direction: row;
 `;
 
-export const MessagesScroll = styled.ScrollView`
+export const MessagesScroll = styled.View`
     flex: 1;
 `;
 export const MessagesList = styled.ScrollView`

@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Title = styled.Text`
-    font-size: 26px;
+    font-size: 22px;
     color: #fff;
 `;
 

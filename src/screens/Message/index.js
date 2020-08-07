@@ -37,6 +37,13 @@ export default function Message({ route }) {
                     <MessageBubble theirs />
                     <MessageBubble />
                     <MessageBubble />
+                    <MessageBubble />
+                    <MessageBubble />
+                    <MessageBubble />
+                    <MessageBubble />
+                    <MessageBubble />
+                    <MessageBubble />
+                    <MessageBubble />
                 </List>
             </Messages>
             <Send>

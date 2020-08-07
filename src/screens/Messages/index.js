@@ -95,27 +95,27 @@ export default function Messages({ navigation }) {
                 <Title>Conversas</Title>
                 <Feather name="search" size={26} color="white" />
             </Header>
-            <Favourites>
-                <Top>
-                    <Label>FAVORITOS</Label>
-                    <Feather name="chevron-down" size={26} color="white" />
-                </Top>
-                <FavouritesScroll horizontal>
-                    <List>
-                        {favoriteUsers.map(user => (
-                            <CircleUser key={user.id} imageStyle={{
-                                borderRadius: 30
-                            }} source={{ uri: user.foto }}><Online /></CircleUser>
-                        ))}
-                    </List>
-                </FavouritesScroll>
-            </Favourites>
-            <Divider ></Divider>
-            <MessagesScroll vertical>
+            {/* <MessagesScroll> */}
                 <MessagesList>
+                    <Favourites>
+                        <Top>
+                            <Label>FAVORITOS</Label>
+                            <Feather name="chevron-down" size={26} color="white" />
+                        </Top>
+                        <FavouritesScroll horizontal>
+                            <List>
+                                {favoriteUsers.map(user => (
+                                    <CircleUser key={user.id} imageStyle={{
+                                        borderRadius: 30
+                                    }} source={{ uri: user.foto }}><Online /></CircleUser>
+                                ))}
+                            </List>
+                        </FavouritesScroll>
+                    </Favourites>
+                    <Divider ></Divider>
                     {contacts.map(contact => (<ContactMessage navigation={navigation} key={contact.id} contact={contact} />))}
                 </MessagesList>
-            </MessagesScroll>
+            {/* </MessagesScroll> */}
         </Container>
     );
 }

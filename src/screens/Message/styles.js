@@ -4,6 +4,7 @@ export const Container = styled.View`
     display: flex;
     flex-direction: column;
     flex: 1;
+    background: #333740;
 `;
 
 export const Header = styled.View`
@@ -11,7 +12,7 @@ export const Header = styled.View`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 20px;
+    padding: 15px 20px;
     background: #333740;
 `;
 
